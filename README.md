@@ -11,6 +11,6 @@ To compilate the program use the terminal command on Linux : gcc "nameofthefile"
 
 To run the program, use the terminal command : ./"anyname"
 
-Example : Compiling --> gcc 1001.c -o test  AND 
+Example :
+Compiling --> gcc 1001.c -o test
 Running --> ./test
-

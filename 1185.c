@@ -1,25 +1,10 @@
-/*
-* Author : Ronald Pereira
-*
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; either version 2 of the License, or
-* (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
- 
+
 double soma(double **mat){
- 
+
         double soma = 0;
- 
+
         soma = (mat[0][0] + mat[0][1] + mat[0][2] + mat[0][3] + mat[0][4] + mat[0][5] + mat[0][6] + mat[0][7] + mat[0][8] +
                 mat[0][9] + mat[0][10] + mat[1][0] + mat[1][1] + mat[1][2] + mat[1][3] + mat[1][4] + mat[1][5] + mat[1][6] +
                 mat[1][7] + mat[1][8] + mat[1][9] + mat[2][0] + mat[2][1] + mat[2][2] + mat[2][3] + mat[2][4] + mat[2][5] +
@@ -28,40 +13,40 @@ double soma(double **mat){
                 mat[5][0] + mat[5][1] + mat[5][2] + mat[5][3] + mat[5][4] + mat[5][5] + mat[6][0] + mat[6][1] + mat[6][2] +
                 mat[6][3] + mat[6][4] + mat[7][0] + mat[7][1] + mat[7][2] + mat[7][3] + mat[8][0] + mat[8][1] + mat[8][2] +
                 mat[9][0] + mat[9][1] + mat[10][0]);
- 
- 
+
+
 return soma;
 }
- 
- 
+
+
 int main (){
- 
+
         int i, j, n = 12;
- 
+
         double **mat = (double **) malloc (144 * sizeof(double));
- 
+
         char op;
- 
+
         scanf("%c", &op);
- 
- 
+
+
         for(i = 0; i < n; i++){
                 mat[i] = (double *) malloc (144 * sizeof(double));
                 for(j = 0; j < n; j++)
                         scanf("%lf", &mat[i][j]);
         }
- 
+
         if(op == 'S')
                 printf("%.1lf\n", soma(mat));
- 
+
         else if(op == 'M')
                 printf("%.1lf\n", (soma(mat)/66.0));
- 
- 
+
+
         for(i = 0; i < n; i++)
                 free(mat[i]);
- 
+
         free(mat);
- 
+
 return 0;
 }

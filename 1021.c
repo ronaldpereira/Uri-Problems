@@ -1,27 +1,12 @@
-/*
-* Author : Ronald Pereira
-*
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; either version 2 of the License, or
-* (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-*/
-
 #include <stdio.h>
- 
+
 int main(){
- 
+
     int cem, cinquenta, vinte, dez, cinco, dois, um, cinq, vint, dz, cinc, mum;
     double total;
- 
+
     scanf("%lf", &total);
- 
+
     cem = total / 100.0;
     total -= ( cem * 100.0 );
     cinquenta = total / 50.0;
@@ -45,8 +30,8 @@ int main(){
     cinc = total / 0.05;
     total -= ( cinc * 0.05 );
     mum = total / 0.01;
- 
+
     printf("NOTAS:\n%d nota(s) de R$ 100.00\n%d nota(s) de R$ 50.00\n%d nota(s) de R$ 20.00\n%d nota(s) de R$ 10.00\n%d nota(s) de R$ 5.00\n%d nota(s) de R$ 2.00\nMOEDAS:\n%d moeda(s) de R$ 1.00\n%d moeda(s) de R$ 0.50\n%d moeda(s) de R$ 0.25\n%d moeda(s) de R$ 0.10\n%d moeda(s) de R$ 0.05\n%d moeda(s) de R$ 0.01\n", cem, cinquenta, vinte, dez, cinco, dois, um, cinq, vint, dz, cinc, mum);
- 
+
 return 0;
 }

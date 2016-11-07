@@ -1,9 +1,9 @@
-linha = raw_input()
+linha = input()
 valores = linha.split(" ")
- 
+
 x = float(valores[0])
 y = float(valores[1])
- 
+
 if (x > 0 and y > 0):
     print("Q1")
 elif (x < 0 and y > 0):
